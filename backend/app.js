@@ -10,7 +10,6 @@ const cors = require("cors");
 const placesRoutes = require("./routes/places-routes");
 const usersRoutes = require("./routes/users-routes");
 const HttpError = require("./models/http-error");
-const cronJob = require("./cron");
 
 const port = process.env.PORT || 8000;
 
@@ -54,5 +53,3 @@ mongoose
 	.catch((err) => {
 		console.log(err);
 	});
-
-cronJob.start();
